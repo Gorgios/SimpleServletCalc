@@ -10,7 +10,7 @@ public class WebConfiguration {
   @Bean
   public ServletRegistrationBean servletRegistrationHelloBean(){
 
-    return  new ServletRegistrationBean(new HelloServlet(), "/form");
+    return  new ServletRegistrationBean(new HelloServlet(), "/");
   }
 
 }

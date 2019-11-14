@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+
 public class HelloServlet extends HttpServlet {
 
 
@@ -19,10 +20,18 @@ public class HelloServlet extends HttpServlet {
     resp.setContentType("text/html");
 
     out.println("<html><body>");
-
-    out.println("<form action='/data' method='POST'>");
-    out.println("<input type='text' name='imie'>");
-    out.println("</form>");
+    out.println("<form action ='/calc' method ='POST'>"
+            +"<input type='text' name='a'><br>"
+            +"<input type='radio' name='operator' value='+' checked>+<br>"
+            +"<input type='radio' name='operator' value='-'>-<br>"
+            +"<input type='radio' name='operator' value='*'>*<br>"
+            +"<input type='radio' name='operator' value='/'>/<br>"
+            +"<input type='text' name='b'><br>"
+            +"<input type='submit' name='=' value='='>"
+            +"</form>");
+    out.println("<form action='/list' method='GET'> " +
+            "<input type = 'submit' value='Zobacz Twoje obliczenia'> " +
+            "</form>");
 
     out.println("</body></html>");
 
